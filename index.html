@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICT & Skills – School Teachers Event</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+  }
+  header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('cover.png') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 140px 20px 180px;
+    position: relative;
+  }
+  header h1 {
+    font-size: 3.2rem;
+    margin: 0;
+    font-weight: 700;
+  }
+  header p {
+    font-size: 1.4rem;
+    margin-top: 12px;
+    opacity: 0.9;
+  }
+  .cta {
+    margin-top: 40px;
+  }
+  .cta a {
+    background-color: #b5ff00;
+    color: #000;
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .cta a:hover {
+    background-color: #a2eb00;
+    transform: translateY(-3px);
+  }
+
+  .cta2 {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;          /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+}
+  .cta2 a {
+    background-color: #000;
+    color: #b5ff00;
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .cta2 a:hover {
+    background-color: yellow;
+    color: #000;
+    transform: translateY(-3px);
+  }
+  section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    }
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+    .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .card span a {
+      color: #000;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+      .card:nth-child(1) {
+      background: #ffffff;
+      border: 2px solid #b5ff00;
+    }
+    .card:nth-child(2) {
+      background: #b5ff00;
+      color: #000;
+    }
+    .card:nth-child(3) {
+      background: #111;
+      color: #fff;
+    }
+    .card:nth-child(3) p{
+      background: #111;
+      color: #fff;
+    }
+    .card:nth-child(3) a{
+      background: #111;
+      color: #fff;
+    }
+    .card:nth-child(4) {
+      background: #f0f0f0;
+      border-left: 8px solid #b5ff00;
+    }
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    font-size: 1rem;
+  }
+  .schedule-table th, .schedule-table td {
+    padding: 16px 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  .schedule-table th {
+    background-color: #b5ff00;
+    color: #000;
+    font-size: 1.1rem;
+  }
+  .schedule-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95rem;
+  }
+  .all-in-one {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .all-in-one h1, .all-in-one h2, .all-in-one h3 {
+      color: #222;
+      margin-bottom: 20px;
+    }
+    .all-in-one h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .all-in-one h2 {
+      font-size: 2rem;
+      border-left: 5px solid #b5ff00;
+      padding-left: 12px;
+    }
+    .all-in-one p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .all-in-one ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+    .all-in-one ul li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+    .all-in-one .resources a {
+      display: inline-block;
+      background: #b5ff00;
+      color: #000;
+      padding: 12px 24px;
+      margin: 8px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .all-in-one .resources a:hover {
+      background: #a2eb00;
+    }
+    /* Scroll to Top Button */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #b5ff00;
+  color: #000;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #a2eb00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+#scrollToTopBtn svg {
+  width: 24px;
+  height: 24px;
+}
+.footer-document-link {
+  color: #b5ff00;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  border-bottom: 1px solid #b5ff00;
+  padding-bottom: 2px;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>ICT & Skills – Городское мероприятие для школьных учителей</h1>
+    <p>Присоединяйтесь к празднику цифрового образования – программирование, базы данных, 3D-моделирование и веб-технологии!</p>
+    <div class="cta">
+      <a href="https://forms.gle/your-registration-link">Зарегистрироваться</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>О мероприятии</h2>
+    <p>Добро пожаловать на ежегодное мероприятие ICT & Skills, где школьные учителя соревнуются, обмениваются опытом и развиваются в области цифровых технологий. Если вы увлечены программированием, базами данных, дизайном или веб-разработкой – это событие для вас!</p>
+  </section>
+
+  <section>
+    <h2>Соревнования</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Робототехника</h3>
+        <p>Испытайте свои логические и аналитические способности в реальных условиях.</p>
+        <span><a href="#robotics">Подробнее</a></span> <!-- добавлено -->
+      </div>
+      <div class="card">
+        <h3>Веб-разработка: frontend+backend</h3>
+        <p>Продемонстрируйте навыки работы с SQL и структурированием данных.</p>
+        <span><a href="#webdev">Подробнее</a></span> <!-- добавлено -->
+      </div>
+      <div class="card">
+        <h3>Проектирование и моделирование сетей</h3>
+        <p>Раскройте креативность с помощью профессиональных инструментов 3D-моделирования.</p>
+        <span><a href="#networking">Подробнее</a></span> <!-- добавлено -->
+      </div>
+      <div class="card">
+        <h3>Олимпиадное программирование</h3>
+        <p>Создавайте современные сайты на HTML, CSS и JavaScript.</p>
+        <span><a href="#olympiad">Подробнее</a></span> <!-- добавлено -->
+      </div>
+      <div class="card">
+        <h3>Разработка мобильных приложении</h3>
+        <p>Создавайте современные сайты на HTML, CSS и JavaScript.</p>
+        <span><a href="#mobileapps">Подробнее</a></span> <!-- добавлено -->
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Расписание мероприятия</h2>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Время</th>
+          <th>Мероприятие</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>14:00 – 14:40</td><td>Регистрация участников</td></tr>
+        <tr><td>14:40 – 15:00</td><td>Торжественное открытие конкурса </td></tr>
+        <tr><td>15:00 – 16:30</td><td>Начало конкурса по всем компетенциям</td></tr>
+        <tr><td rowspan="2">16:30-17:00</td><td>Кофе-брейк для всех участников</td></tr>
+        <tr><td>Выставка проектных работ</td></tr>
+        <tr><td>17:00</td><td>Закрытие и награждение </td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- НОВЫЕ СЕКЦИИ ПО КОМПЕТЕНЦИЯМ -->
+  <section id="robotics">
+    <div class="all-in-one">
+  <h1>Компетенция: Робототехника</h1>
+  <h2>“ICT Skills 2025”</h2>
+
+  <p><strong>Компетенция</strong> “Робототехника” определяется как умение участников самостоятельно собирать схему устройства, написать код для микроконтроллера и протестировать предложенными данными. Участник должен будет собрать устройство по предложенной схеме на базе робототехнической платформы Arduino Uno и написать программу для управления в среде разработки Arduino IDE.</p>
+
+  <h2>Требования</h2>
+  <p><strong>Необходимые знания:</strong></p>
+  <ul>
+    <li>основы схемотехники и электроники для “чтения” принципиальных схем;</li>
+    <li>создание и сборка устройства на основе схемы;</li>
+    <li>навыки программирования на языке C++ для написания программы.</li>
+  </ul>
+
+  <h2>Описание задания</h2>
+  <p>В ходе выполнения конкурсного задания участникам предстоит собрать устройство на основе тех элементов набора и ресурсов, которые будут предоставлены организаторами.</p>
+
+  <h2>Ресурсы</h2>
+  <div class="resources">
+    <a href="http://wiki.amperka.ru/" target="_blank">Wiki Амперки</a><br>
+    <a href="https://create.arduino.cc/projecthub?_gl=1*13uf0jn*_ga*NTM1NzU3MjgwLjE2NDUyNDQ0ODI.*_ga_NEXN8H46L5*MTY0OTY1Mjg0My42LjEuMTY0OTY1Mjk5OS4w" target="_blank">Arduino Project Hub</a><br>
+    <a href="https://www.instructables.com/" target="_blank">Instructables</a>
+  </div>
+  <div class="cta2">
+      <a href="https://forms.gle/your-registration-link">Зарегистрироваться</a>
+    </div>
+</div>
+
+  </section>
+
+  <section id="webdev">
+    <div class="all-in-one">
+  <h1>Компетенция: Веб-разработка: frontend / backend</h1>
+  <h2>"ICT Skills 2025"</h2>
+
+  <p><strong>Компетенция</strong> «Веб-разработка: Frontend / Backend» — это совокупность навыков, необходимых для создания полнофункционального веб-сайта, включающего пользовательский интерфейс (frontend) и серверную логику (backend). Разработка осуществляется с использованием HTML, CSS, JavaScript, PHP и MySQL. Конкурс проводится для учителей общеобразовательных школ, желающих освоить современные инструменты веб-программирования, применить их в педагогической практике, получить экспертную оценку своей работы и заряд вдохновения от коллег.</p>
+
+  <h2>Требования</h2>
+  <p><strong>Необходимые знания и навыки:</strong></p>
+  <ul>
+    <li>уверенное владение HTML для создания структуры страниц;</li>
+    <li>знание CSS для стилизации и адаптивной верстки;</li>
+    <li>основы JavaScript для реализации интерактивности на сайте;</li>
+    <li>использование PHP для обработки запросов и взаимодействия с сервером;</li>
+    <li>умение подключаться и работать с базой данных MySQL (создание таблиц, выполнение запросов);</li>
+    <li>базовые знания клиент-серверной архитектуры;</li>
+    <li>создание форм, работа с отправкой и обработкой данных;</li>
+    <li>понимание принципов хранения и извлечения информации из БД.</li>
+  </ul>
+
+  <h2>Описание задания</h2>
+  <p>В ходе выполнения конкурсного задания участникам предстоит разработать веб-сайт с интеграцией клиентской и серверной части. Проект должен демонстрировать целостный подход к созданию веб-приложения: от визуального оформления до работы с данными и их хранением. Работа должна отражать умение использовать основные технологии веб-разработки для решения прикладной задачи.</p>
+
+  <h2>Ресурсы</h2>
+  <div class="resources">
+    <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML Tutorial (W3Schools)</a><br>
+    <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS Tutorial (W3Schools)</a><br>
+    <a href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript Tutorial (W3Schools)</a><br>
+    <a href="https://www.w3schools.com/sql/default.asp" target="_blank">SQL Tutorial (W3Schools)</a><br>
+    <a href="https://www.w3schools.com/php/default.asp" target="_blank">PHP Tutorial (W3Schools)</a>
+  </div>
+    <div class="cta2">
+      <a href="https://forms.gle/your-registration-link">Зарегистрироваться</a>
+    </div>
+  
+</div>
+  </section>
+
+  <section id="networking">
+   <div class="all-in-one">
+  <h1>Компетенция: Проектирование и моделирование сетей</h1>
+  <h2>“ICT Skills 2025”</h2>
+
+  <p><strong>Компетенция</strong> “Проектирование и моделирование сетей” определяется как умение участников самостоятельно строить локальную сеть, используя востребованные топологии сетей в модели OSI, а также их настройку с использованием статических/динамических IP-адресов с помощью различных сетевых устройств (hub, switch и router).</p>
+
+  <h2>Требования</h2>
+  <p><strong>Необходимые знания:</strong></p>
+  <ul>
+    <li>разновидности сетевых устройств и их назначения;</li>
+    <li>стеки протоколов TCP/IP;</li>
+    <li>команды, используемые для диагностики сети.</li>
+  </ul>
+  <p><strong>Необходимые умения:</strong></p>
+  <ul>
+    <li>знать основы использования Cisco Packet Tracer;</li>
+    <li>строить локальные сети на основе проводных/беспроводных технологий.</li>
+  </ul>
+
+  <h2>Пример задания</h2>
+  <p>Используя Cisco Packet Tracer, построить локальную сеть. К локальной сети подключить сетевой принтер с возможностью печати по сети через любое подключенное к сети устройство (ПК или ноутбук).</p>
+  <p>Проверка умений использовать утилиты:</p>
+  <ul>
+    <li>проверки целостности и качества соединений в сетях на основе TCP/IP;</li>
+    <li>трассировку маршрута до заданного узла в локальной сети;</li>
+    <li>настройку беспроводной сети с использованием сетевого оборудования.</li>
+  </ul>
+
+  <h2>Ресурсы</h2>
+  <div class="resources">
+    <a href="https://youtube.com/playlist?list=PLcDkQ2Au8aVNYsqGsxRQxYyQijILa94T9" target="_blank">Курс молодого бойца от NetSkills</a>
+  </div>
+ <div class="cta2">
+      <a href="https://forms.gle/your-registration-link">Зарегистрироваться</a>
+    </div>
+</div>
+
+  </section>
+
+  <section id="olympiad">
+    <div class="all-in-one">
+  <h1>Компетенция: Олимпиадное программирование</h1>
+  <h2>“ICT Skills 2025”</h2>
+
+  <p><strong>Компетенция</strong> “Олимпиадное программирование” позволяет проверить навыки программирования через решение практических, нестандартных заданий. 
+  Программист решает задания посредством решения задач с использованием языка программирования по выбору или по выбору организатора.</p>
+
+  <h2>Требования</h2>
+  <p><strong>Необходимые знания и умения:</strong></p>
+  <ul>
+    <li>уметь читать псевдокод;</li>
+    <li>разрабатывать свое решение с использованием разных операторов;</li>
+    <li>тестировать свою программу, используя входные и выходные данные.</li>
+  </ul>
+
+  <h2>Описание задания</h2>
+  <p>В ходе выполнения конкурсного задания участникам предстоит решить задачи разных уровней, написав свои алгоритмы для решения данных задач. 
+  Участник может использовать любые дозволенные программные конструкции и операторы для достижения результата. 
+  Проверка написанных программ будет производиться по нескольким критериям, включая быстроту выполнения и успешное прохождение нескольких уровней тестов с заданными входными параметрами.</p>
+
+  <h2>Ресурсы</h2>
+  <div class="resources">
+    <a href="https://acmp.ru/" target="_blank">Школа программиста (acmp.ru)</a><br>
+    <a href="https://izilearn.ru/index.php?r=acmp" target="_blank">IziLearn</a>
+  </div>
+ <div class="cta2">
+      <a href="https://forms.gle/your-registration-link">Зарегистрироваться</a>
+    </div>
+</div>
+
+  </section>
+
+  <section id="mobileapps">
+    <div class="all-in-one">
+  <h1>Компетенция: Разработка мобильных приложений</h1>
+
+  <p><strong>Компетенция</strong> определяется как набор профессиональных навыков процесса разработки мобильного приложения, редактирования, использования дружественного интерфейса и обеспечения адаптивности. 
+  Для работы используются программно-вычислительные средства (персональные компьютеры, мобильные телефоны с ОС Android).</p>
+
+  <p><strong>Конкурс проводится</strong> для учителей общеобразовательных школ, которые хотят:</p>
+  <ul>
+    <li>сделать что-нибудь новое и интересное;</li>
+    <li>получить опыт и советы экспертов;</li>
+    <li>получить большое количество контактов и обратную связь от других участников;</li>
+    <li>получить «крутые» эмоции.</li>
+  </ul>
+
+  <h2>Требования</h2>
+  <p><strong>Необходимые знания:</strong></p>
+  <ul>
+    <li>знание блочного программирования;</li>
+    <li>создание приложений от кода и проекта до дизайна интерфейса;</li>
+    <li>владение базой объектно-ориентированного программирования;</li>
+    <li>настройка и тестирование приложения;</li>
+    <li>работа с базами данных;</li>
+    <li>умение писать, читать и редактировать код;</li>
+    <li>выстраивание архитектуры приложения.</li>
+  </ul>
+
+  <h2>Описание задания</h2>
+  <p>В ходе выполнения конкурсного задания участникам предстоит спроектировать мобильное приложение с использованием различных видов алгоритма.</p>
+
+  <h2>Ресурсы</h2>
+  <div class="resources">
+    <a href="https://thunkable.com/" target="_blank">Thunkable</a><br>
+    <a href="https://play.google.com/store/apps/details?id=com.thunkable.live&hl=ru&gl=US" target="_blank">Приложение Thunkable Live (Google Play)</a>
+  </div>
+ <div class="cta2">
+      <a href="https://forms.gle/your-registration-link">Зарегистрироваться</a>
+    </div>
+</div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ICT & Skills. Все права защищены.</p>
+    <a href="path/to/your-document.pdf" class="footer-document-link" download>
+    Общее положение
+  </a>
+  </footer>
+  <button id="scrollToTopBtn" title="Go to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</button>
+<script>
+  // Scroll to top button
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollToTopBtn.style.display = "flex";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  };
+  
+  scrollToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+</body>
+</html>
